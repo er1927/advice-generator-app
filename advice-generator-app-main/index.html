@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Advice generator app</title>
@@ -34,14 +34,24 @@
       padding:20px;
     }
 
+    .advice-number {
+      text-transform: uppercase;
+      color: #52ffa8;
+      letter-spacing: 3px;
+    }
+
+    .advice-text {
+      font-weight: 800;
+      font-size: 2em;
+    }
 
   </style>
 </head>
 <body>
    <div class="container">
       <div class="card">
-        <div class="advice-number">
-            <h5>Advice #1990</h5>
+        <div>
+            <h6 class="advice-number">Advice #1990</h6>
         </div>
         <div class="advice-text">
             <p>"You should eat your food before it eats you."</p>
