@@ -88,7 +88,7 @@
    <div class="container">
       <div class="card">
         <div>
-            <h6 class="advice-number">Advice #1990</h6>
+            <h6 class="advice-number">Advice #<span id="advice-id"></span></h6>
         </div>
         <div class="advice-text">
             <p id="quote"></p>
@@ -107,16 +107,18 @@
   </div>
 <script>
   const button = document.getElementById("dice-button");
-  const quote = document.getElementById("quote")
+  const quote = document.getElementById("quote");
+  const adviceId = document.getElementById("advice-id");
 
   const getQuote = async function () {
   const res = await fetch("https://api.adviceslip.com/advice");
   const data = await res.json();
   quote.innerHTML = (data["slip"]["advice"]);
+  adviceId.innerHTML = (data["slip"]["id"]);
   };
   getQuote();
 
-  button.addEventListener("click", );
+  // button.addEventListener("click", getQuote);
 </script>
 </body>
 </html>
