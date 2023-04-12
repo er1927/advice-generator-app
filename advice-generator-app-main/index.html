@@ -80,10 +80,6 @@
       .card {
       width:464px;
     }
-
-    .divider {
-      
-    }
 }
 
   </style>
@@ -105,11 +101,18 @@
         </div>
       </div>
    </div>
- 
-  
-  <div class="attribution">
+   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
     Coded by <a href="https://github.com/er1927" _target="blank">Elizabeth Roberts</a>.
   </div>
+<script>
+  const getData = async function () {
+  const res = await fetch("https://api.adviceslip.com/advice");
+  const data = await res.json();
+  console.log(data);
+};
+getData();
+
+</script>
 </body>
 </html>
