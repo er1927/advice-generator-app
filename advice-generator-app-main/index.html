@@ -12,9 +12,9 @@
 
   
   <style>
-    * {
+    /* * {
       outline: dotted 3px hotpink;
-    }
+    } */
     body {
       margin: 10px;
       font-size:1em;
@@ -34,7 +34,7 @@
       background-color:#323a49;
       border-radius: 10px;
       margin: 80px auto;
-      padding:20px;
+      padding: 10px 20px;
       width:315px;
       display: flex;
       flex-direction: column;
@@ -57,8 +57,8 @@
       display:flex;
       justify-content: center;
       align-items: center;
-      height: 50px;
-      width: 50px;
+      height: 60px;
+      width: 60px;
       background-color: #52ffa8;
       border-radius: 50%;
       position: relative;
@@ -75,6 +75,16 @@
               0 0 2.8rem #52ffa8,
               inset 0 0 1.3rem#52ffa8;
     }
+
+    @media screen and (min-width: 1440px) {
+      .card {
+      width:464px;
+    }
+
+    .divider {
+      
+    }
+}
 
   </style>
 </head>
