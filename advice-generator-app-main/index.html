@@ -91,7 +91,7 @@
             <h6 class="advice-number">Advice #1990</h6>
         </div>
         <div class="advice-text">
-            <p>"You should eat your food before it eats you."</p>
+            <p id="quote"></p>
         </div>
         <div class="divider">
           <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z"/><g transform="translate(138)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
@@ -107,15 +107,16 @@
   </div>
 <script>
   const button = document.getElementById("dice-button");
+  const quote = document.getElementById("quote")
 
-  const getData = async function () {
+  const getQuote = async function () {
   const res = await fetch("https://api.adviceslip.com/advice");
   const data = await res.json();
-  console.log(data);
-};
+  quote.innerHTML = (data["slip"]["advice"]);
+  };
+  getQuote();
 
-
-button.addEventListener("click", getData);
+  button.addEventListener("click", );
 </script>
 </body>
 </html>
